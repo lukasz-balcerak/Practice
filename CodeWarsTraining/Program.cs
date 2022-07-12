@@ -9,6 +9,8 @@ var signature = new double[] { 13, 17, 10 };
 var stepsInFibo = 1;
 var namesArry = new string[] { "Lucas", "Eva", "Marco", "Elizabeth" };
 var simpleNumber = 942;
+var simpleWord = "aabb";
+char[] simpleWordArr = simpleWord.ToCharArray();
 
 
 //Console.WriteLine(PigLatin.PigIt(exampleWord));
@@ -21,4 +23,13 @@ var simpleNumber = 942;
 //ClassTaskOne.DoTaskOne();
 //ClassTaskOne.DoTaskTwo();
 //Console.WriteLine(WhoLikeThis.Likes(namesArry));
-Console.WriteLine(SumOfDigits.DigitalRoot(simpleNumber));
+//Console.WriteLine(SumOfDigits.DigitalRoot(simpleNumber));
+Permutations.GetPermutation(simpleWordArr);
+var list = Permutations.elementsList;
+var listWithOutDuplicate = list.Distinct().ToList();
+var count = 0;
+foreach(var item in listWithOutDuplicate)
+{
+    Console.WriteLine(listWithOutDuplicate[count]);
+    count++;
+}

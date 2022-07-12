@@ -18,7 +18,14 @@ namespace CodeWarsTraining.Kata
         {
             var finallResult = n;
             
-            long rootStep(long number) 
+            while (finallResult > 9)
+            {
+                finallResult = rootStep(finallResult);
+            }
+
+            return (int)finallResult;
+
+            long rootStep(long number)
             {
                 var result = 0;
                 List<int> digits = new List<int>();
@@ -34,13 +41,6 @@ namespace CodeWarsTraining.Kata
                 }
                 return (long)result;
             }
-
-            while (finallResult > 10)
-            {
-                finallResult = rootStep(finallResult);
-            }
-
-            return (int)finallResult;
         }
     }
 }
